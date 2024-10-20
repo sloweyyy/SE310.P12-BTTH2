@@ -1,8 +1,5 @@
 using EmployeeAdminPortal.Data;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,8 +15,7 @@ builder.Services.AddSwaggerGen();
 DotNetEnv.Env.Load();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
-    options.UseSqlServer("data source=527e0efe7961;initial catalog=master;user id=sa;password=SloWeydadev20062004@"));
-
+    options.UseSqlServer("Data Source=localhost; Initial Catalog=master; User ID=sa; Password=SloWeydadev20062004@; TrustServerCertificate=True"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
