@@ -1,3 +1,4 @@
+using System.Linq;
 using ApiAdminDashboard.Models;
 using ApiAdminDashboard.Models.Entity;
 using EmployeeAdminPortal.Data;
@@ -14,7 +15,6 @@ namespace ApiAdminDashboard.Controllers
         public ProductsController(ApplicationDbContext dbContext)
         {
             _db = dbContext;
-            
         }
         
         [HttpGet]
